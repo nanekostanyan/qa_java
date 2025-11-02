@@ -24,7 +24,7 @@ public class LionManeParamTest {
         this.expectedHasMane = expectedHasMane;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{index}: sex={0}, hasMane={1}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {"Самец", true},
@@ -34,9 +34,10 @@ public class LionManeParamTest {
 
     @Test
     public void doesHaveManeDependsOnSex() throws Exception {
-
         Lion lion = new Lion(felineMock, sex);
+
         boolean actual = lion.doesHaveMane();
+
         assertEquals(expectedHasMane, actual);
     }
 }

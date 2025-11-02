@@ -37,6 +37,12 @@ public class CatTest {
         List<String> actual = cat.getFood();
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getFoodCallEatMeatOnlyOnce() throws Exception {
+        cat.getFood();
+
         verify(feline, times(1)).eatMeat();
     }
 }
