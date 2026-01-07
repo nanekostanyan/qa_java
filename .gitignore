@@ -1,5 +1,15 @@
 # Compiled class file
 *.class
+.idea
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+# build & coverage reports
+/target/
+*.html
+*.gif
 
 # Log file
 *.log
